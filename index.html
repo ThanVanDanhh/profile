@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="background">
+                <h1>Welcome !</h1>
+                <p>Trang web này được thiết kế để giới thiệu về bản thân tôi.</p>
+            </div>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2>Về tôi</h2>
+            <p>Tôi là một lập trình viên trong lĩnh vực công nghệ thông tin. Tôi yêu thích khám phá các giải pháp sáng tạo và đã tham gia nhiều dự án lớn nhỏ, từ phát triển web cho đến ứng dụng di động. Ngoài ra, tôi còn có chút thành tích nhỏ về thể thao và truyền thông.</p>
+            <div class="photos">
+                <div class="photo">
+                    <img src="./img/z5966400802859_678962bbd98166d96040e5555ba4166c.jpg" alt="Thân Văn Danh">
+                    <p>Thân Văn Danh</p>
+                </div>
+                <div class="photo">
+                    <img src="./img/z5966400793894_7f8341a90538223071cd8b697c61e511.jpg" alt="Ảnh 2">
+                    <p>Creative/Art Director</p>
+                </div>
+                <div class="photo">
+                    <img src="./img/z5966400799232_c2e2ce7e3b9b3f69a84b2452ede0595b.jpg" alt="Ảnh 3">
+                    <p>Volleyball</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2>Liên Hệ</h2>
+            <form>
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:your-email@example.com">vandanh2207@gmail.com</a> <i class="fas fa-envelope"></i></p>
+                <p>Phone: <a href="tel:+1234567890">+84799110136</a> <i class="fas fa-phone-alt"></i></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Trang Cá Nhân của Tôi</p>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                tabs.forEach(item => item.classList.remove('active'));
+                tab.classList.add('active');
+
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === tab.getAttribute('href').substring(1)) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
