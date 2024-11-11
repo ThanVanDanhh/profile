@@ -1,156 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1a1a1a; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ sáng */
 }
-.h{
-margin: 10 15;
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
 }
+
 header {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    width: 100%; 
-    text-align: center;
-  
+    background: #2c3e50; /* Màu nền cho header */
+    padding: 15px; /* Giảm khoảng cách bên trong */
+    border-radius: 8px; /* Bo góc cho header */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.profile {
     display: flex;
-    justify-content: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
 }
 
-nav ul li {
-    margin: 0 1rem;
+.profile-logo {
+    flex: 0 0 auto; /* Không cho logo co giãn */
+    margin-right: 15px; /* Giảm khoảng cách giữa logo và thông tin */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.profile-logo img {
+    width: 60px; /* Đặt kích thước cho logo nhỏ hơn */
+    height: 60px; /* Đặt kích thước cho logo nhỏ hơn */
+    border-radius: 50%; /* Tạo hình tròn */
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #555;
-}
-
-.tab-content {
-    display: none;
-    padding: 2rem;
-    text-align: center;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.background {
-    background-image: url('https://thatnhucuocsong.com.vn/wp-content/uploads/2022/01/hinh-nen-cong-nghe-dep-mau-toi-don-gian.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.profile-info {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    transition: background-image 1s ease-in-out;
-    margin: 0; /* Ensure full screen background */
+    flex-direction: column; /* Đặt các phần tử theo cột */
+    background-color: #34495e; /* Màu nền cho khung thông tin */
+    padding: 15px; /* Giảm khoảng cách bên trong */
+    border-radius: 8px; /* Bo góc cho khung */
+    height: 80px; /* Giảm chiều cao cố định cho khung thông tin */
 }
 
-.photos {
+.profile-info h1 {
+    margin: 0; /* Bỏ margin cho h1 */
+    font-size: 20px; /* Giảm kích thước chữ lớn hơn */
+}
+
+.profile-info p {
+    margin: 5px 0 0; /* Thêm khoảng cách cho p */
+    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
+}
+
+.tabs {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Căn giữa các tab */
+    margin: 20px 0; /* Khoảng cách trên và dưới */
 }
 
-.photos .photo {
-    margin: 1rem;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 20px; /* Rounded corners */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.photos .photo img {
-    border-radius: 20px;
-    max-width: 50%; /* Ensures the images fit within the parent container */
-}
-
-.photos .photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: .5rem;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: .5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: .5rem 2rem;
+.tab-button {
+    padding: 10px 20px; /* Giảm kích thước cho nút */
+    background-color: #3498db; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
     border: none;
-    background-color: #333;
-    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif; /* Sử dụng font chữ đẹp */
+    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
 }
 
-form button:hover {
-    background-color: #555;
+.tab-button:hover {
+    background-color: #2980b9; /* Thay đổi màu khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
 }
 
-.contact-info {
-    margin-top: 2rem;
+.tab {
+    display: none;
+    background-color: #34495e; /* Màu nền cho phần tab */
+    padding: 20px;
+    border-radius: 8px; /* Bo góc cho phần tab */
+    margin-top: 10px; /* Khoảng cách trên */
+    min-height: 300px; /* Chiều cao tối thiểu cho các tab */
 }
 
-.contact-info p {
-    margin: 0.5rem 0;
+.tab.active {
+    display: block;
 }
 
-.contact-info a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
+h2 {
+    color: #3498db; /* Màu tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
 }
 
-.contact-info a:hover {
-    color: #555;
+.lab-grid {
+    display: grid; /* Sử dụng grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 20px; /* Khoảng cách giữa các lab */
 }
 
-footer {
+.lab {
+    background-color: #2c3e50; /* Màu nền cho lab */
+    border-radius: 8px; /* Bo góc cho lab */
+    padding: 15px; /* Khoảng cách bên trong */
+    transition: transform 0.3s; /* Hiệu ứng chuyển tiếp */
     text-align: center;
-    padding: 1px;
-    background-color: #333;
-    color: white;
-    position: fixed;
+}
+
+.lab img {
     width: 100%;
-    bottom: 0;
+    border-radius: 5px;
+}
+
+.lab:hover {
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px; /* Khoảng cách giữa các biểu tượng xã hội */
+    transition: transform 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Tăng kích thước nhẹ khi hover */
+}
+
+.project-button {
+    padding: 10px 20px; /* Giảm kích thước cho nút "Xem Dự án" */
+    background-color: #e67e22; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border: none;
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif; /* Sử dụng font chữ đẹp */
+    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+    margin-top: 20px; /* Khoảng cách trên nút */
+}
+
+.project-button:hover {
+    background-color: #d35400; /* Thay đổi màu khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
 }
