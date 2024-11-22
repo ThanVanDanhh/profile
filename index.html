@@ -1,110 +1,39 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile cá nhân</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Website</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="profile">
-                <div class="profile-logo">
-                    <img src="img/Screenshot 2024-11-11 132940.png" alt="Hình ảnh đại diện của Margarita">
-                </div>
-                <div class="profile-info">
-                    <h1>Xin chào, tôi là Danh</h1>
-                    <p>Một nhà phát triển web đam mê với khả năng tạo ra những trang web đẹp và chức năng.</p>
-                </div>
-            </div>
-        </div>
+        <a href="#" class="logo">Than Van Danh</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="lab.html" >Lab</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
     </header>
-    <main>
-        <div class="tabs">
-            <button class="tab-button" onclick="showTab('about')">Giới thiệu</button>
-            <button class="tab-button" onclick="showTab('labs')">Lab</button>
-            <button class="tab-button" onclick="showTab('contact')">Liên hệ</button>
+    <section class="home">
+        <div class="home-img">
+            <img src="img/Screenshot 2024-11-11 132940.png" alt="">
         </div>
-        <section id="about" class="tab active">
-            <div class="container">
-                <h2>Giới thiệu về tôi</h2>
-                <p>Sinh viên khoa Công nghệ thông tin, trường đại học Nông Lâm TPHCM</p>
-                <ul>
-                    <li>Họ và tên: Thân Văn Danh</li>
-                    <li>Ngày sinh: 22/07/2005</li>
-                    <li>Cung hoàng đạo: Cự giải</li>
-                    <li>Tuổi: 19</li>
-                </ul>
+        <div class="home-content">
+            <h1>Hi, It's <span>Than Van Danh</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ThanVanDanhh"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-        </section>
-        <section id="labs" class="tab">
-            <div class="container">
-                <h2>Các Lab của tôi</h2>
-                <div class="lab-grid">
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133112.png" alt="Hình ảnh Lab 1">
-                        <h3>Lab 1</h3>
-                        <p>Dự án thứ 1</p>
-                        <a href="https://thanvandanhh.github.io/hci_23130043/" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133142.png" alt="Hình ảnh Lab 2">
-                        <h3>Lab 2</h3>
-                        <p>Dự án thứ 2</p>
-                        <a href="your-lab-2-link.html" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133207.png" alt="Hình ảnh Lab 3">
-                        <h3>Lab 3</h3>
-                        <p>Dự án thứ 3</p>
-                        <a href="https://thanvandanhh.github.io/lab3/" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133235.png" alt="Hình ảnh Lab 4">
-                        <h3>Lab 4</h3>
-                        <p>Dự án thứ 4</p>
-                        <a href="https://thanvandanhh.github.io/lab_4/" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133317.png" alt="Hình ảnh Lab 5">
-                        <h3>Lab 5</h3>
-                        <p>Dự án thứ 5</p>
-                        <a href="https://thanvandanhh.github.io/lab5/" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                    <div class="lab">
-                        <img src="img/Screenshot 2024-11-11 133255.png" alt="Hình ảnh Lab 6">
-                        <h3>Lab 6</h3>
-                        <p>Dự án thứ 6</p>
-                        <a href="https://thanvandanhh.github.io/lab_6/" target="_blank" class="project-button">Xem Dự án</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="tab">
-            <div class="container">
-                <h2>Liên hệ với tôi</h2>
-                <p>Nếu bạn muốn liên hệ, hãy cảm thấy tự do liên lạc qua bất kỳ nền tảng nào dưới đây:</p>
-                <ul>
-                    <li>Email: <a href="mailto:your-email@example.com">vdanh2207@gmail.com</a></li>
-                    <li>Điện thoại: <a href="tel:+1234567890">+84799110136</a></li>
-                    
-                </ul>
-                <div class=" social-icons">
-                    <a href="https://facebook.com/yourprofile" target="_blank"><img src="data:image/png;base64,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" alt="Facebook"></a>
-                    <a href="https://instagram.com/yourprofile" target="_blank"><img src="data:image/png;base64,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" alt="Instagram"></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script>
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
 </body>
 </html>

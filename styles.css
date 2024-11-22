@@ -1,151 +1,329 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
+*{
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Màu nền tối */
-    color: #ffffff; /* Màu chữ sáng */
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-}
-
-header {
-    background: #2c3e50; /* Màu nền cho header */
-    padding: 15px; /* Giảm khoảng cách bên trong */
-    border-radius: 8px; /* Bo góc cho header */
-}
-
-.profile {
-    display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-}
-
-.profile-logo {
-    flex: 0 0 auto; /* Không cho logo co giãn */
-    margin-right: 15px; /* Giảm khoảng cách giữa logo và thông tin */
-}
-
-.profile-logo img {
-    width: 60px; /* Đặt kích thước cho logo nhỏ hơn */
-    height: 60px; /* Đặt kích thước cho logo nhỏ hơn */
-    border-radius: 50%; /* Tạo hình tròn */
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column; /* Đặt các phần tử theo cột */
-    background-color: #34495e; /* Màu nền cho khung thông tin */
-    padding: 15px; /* Giảm khoảng cách bên trong */
-    border-radius: 8px; /* Bo góc cho khung */
-    height: 80px; /* Giảm chiều cao cố định cho khung thông tin */
-}
-
-.profile-info h1 {
-    margin: 0; /* Bỏ margin cho h1 */
-    font-size: 20px; /* Giảm kích thước chữ lớn hơn */
-}
-
-.profile-info p {
-    margin: 5px 0 0; /* Thêm khoảng cách cho p */
-    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
-}
-
-.tabs {
-    display: flex;
-    justify-content: center; /* Căn giữa các tab */
-    margin: 20px 0; /* Khoảng cách trên và dưới */
-}
-
-.tab-button {
-    padding: 10px 20px; /* Giảm kích thước cho nút */
-    background-color: #3498db; /* Màu nền cho nút */
-    color: white; /* Màu chữ */
+    box-sizing: border-box;
+    text-decoration: none;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif; /* Sử dụng font chữ đẹp */
-    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
-    margin: 0 5px; /* Khoảng cách giữa các nút */
-    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.tab-button:hover {
-    background-color: #2980b9; /* Thay đổi màu khi hover */
-    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+html{
+    font-size: 62.5%;
 }
 
-.tab {
-    display: none;
-    background-color: #34495e; /* Màu nền cho phần tab */
-    padding: 20px;
-    border-radius: 8px; /* Bo góc cho phần tab */
-    margin-top: 10px; /* Khoảng cách trên */
-    min-height: 300px; /* Chiều cao tối thiểu cho các tab */
-}
-
-.tab.active {
-    display: block;
-}
-
-h2 {
-    color: #3498db; /* Màu tiêu đề */
-    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
-}
-
-.lab-grid {
-    display: grid; /* Sử dụng grid layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 cột */
-    gap: 20px; /* Khoảng cách giữa các lab */
-}
-
-.lab {
-    background-color: #2c3e50; /* Màu nền cho lab */
-    border-radius: 8px; /* Bo góc cho lab */
-    padding: 15px; /* Khoảng cách bên trong */
-    transition: transform 0.3s; /* Hiệu ứng chuyển tiếp */
-    text-align: center;
-}
-
-.lab img {
+body{
     width: 100%;
-    border-radius: 5px;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
 }
 
-.lab:hover {
-    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px; /* Khoảng cách giữa các biểu tượng xã hội */
-    transition: transform 0.3s; /* Hiệu ứng chuyển tiếp */
-}
-
-.social-icons img:hover {
-    transform: scale(1.1); /* Tăng kích thước nhẹ khi hover */
-}
-
-.project-button {
-    padding: 10px 20px; /* Giảm kích thước cho nút "Xem Dự án" */
-    background-color: #e67e22; /* Màu nền cho nút */
-    color: white; /* Màu chữ */
-    border: none;
-    border-radius: 5px; /* Bo góc cho nút */
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif; /* Sử dụng font chữ đẹp */
-    font-size: 14px; /* Giảm kích thước chữ rõ ràng hơn */
-    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
-    margin-top: 20px; /* Khoảng cách trên nút */
+    transition: 0.5s ease;
 }
 
-.project-button:hover {
-    background-color: #d35400; /* Thay đổi màu khi hover */
-    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #b74b4b;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0  0 25px #b74b4b;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Youtuber";
+    }
+    81%, 100%{
+        content: "Script Writer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+.lab-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rem 9%;
+}
+
+.lab-item {
+    background-color: #161616;
+    border-radius:  4rem;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    width: calc(33% - 2rem);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.lab-item:hover {
+    transform: scale(1.05);
+}
+
+.contact {
+    text-align: center;
+    padding: 5rem 9%;
+}
+
+.contact-form {
+    margin-top: 2rem;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #b74b4b;
+    background-color: #161616;
+    color: white;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+}
+.lab-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép phần tử con xuống dòng */
+    justify-content: space-between; /* Căn chỉnh đều các phần tử */
+}
+
+.lab-item {
+    flex: 0 1 30%; /* Chiều rộng 30% cho mỗi item, có thể điều chỉnh */
+    margin-bottom: 20px; /* Khoảng cách giữa các dòng */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước */
+}
+
+.lab-item img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của item */
+    height: auto; /* Giữ tỉ lệ hình ảnh */
+    border-radius: 20px;
 }
