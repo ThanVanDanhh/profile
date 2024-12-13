@@ -63,7 +63,6 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
-
 @media(max-width:995px){
     nav{
         position: absolute;
@@ -312,18 +311,18 @@ span{
 }
 .lab-container {
     display: flex;
-    flex-wrap: wrap; /* Cho phép phần tử con xuống dòng */
-    justify-content: space-between; /* Căn chỉnh đều các phần tử */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 
 .lab-item {
-    flex: 0 1 30%; /* Chiều rộng 30% cho mỗi item, có thể điều chỉnh */
-    margin-bottom: 20px; /* Khoảng cách giữa các dòng */
-    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước */
+    flex: 0 1 30%; 
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .lab-item img {
-    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của item */
-    height: auto; /* Giữ tỉ lệ hình ảnh */
+    width: 100%; 
+    height: auto; 
     border-radius: 20px;
 }

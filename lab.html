@@ -4,6 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Cập nhật phần tab-list */
+.tab-container {
+    padding: 5rem 9%;
+}
+
+.tab-list {
+    display: flex;
+    justify-content: center; /* Căn giữa các tab */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.tab-item {
+    font-size: 1.8rem;
+    color: white;
+    margin: 0 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.tab-item:hover,
+.tab-item.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Chỉ hiển thị nội dung tab có class "active" */
+.tab-content .tab-pane {
+    display: none; /* Ẩn tất cả các nội dung tab */
+}
+
+.tab-content .tab-pane.active {
+    display: block; /* Hiển thị nội dung của tab được chọn */
+}
+
+/* Cập nhật thêm phần tab-container nếu cần */
+.lab {
+    padding: 5rem 9% 5rem;
+    background-color: black;
+}
+
+    </style>
     <title>Lab</title>
 </head>
 <body>
@@ -17,38 +65,58 @@
     </header>
     
     <section class="lab">
-        <div class="lab-container">
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133112.png" alt="Image 1">
-                <h3>Project 1</h3>
-                <a href="https://thanvandanhh.github.io/lab1/" class="btn">View Project</a>
-            </div>
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133142.png" alt="Image 2">
-                <h3>Project 2</h3>
-                <a href="https://thanvandanhh.github.io/lab_2/" class="btn">View Project</a>
-            </div>
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133207.png" alt="Image 3">
-                <h3>Project 3</h3>
-                <a href="https://thanvandanhh.github.io/lab3/" class="btn">View Project</a>
-            </div>
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133235.png" alt="Image 4">
-                <h3>Project 4</h3>
-                <a href="https://thanvandanhh.github.io/lab_4/" class="btn">View Project</a>
-            </div>
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133317.png" alt="Image 5">
-                <h3>Project 5</h3>
-                <a href="https://thanvandanhh.github.io/lab5/" class="btn">View Project</a>
-            </div>
-            <div class="lab-item">
-                <img src="img/Screenshot 2024-11-11 133255.png" alt="Image 6">
-                <h3>Project 6</h3>
-                <a href="https://thanvandanhh.github.io/lab_6/" class="btn">View Project</a>
+        <div class="tab-container">
+            <!-- Tab navigation (Link to different lab pages) -->
+            <ul class="tab-list">
+                <li><a href="#" class="tab-item active" data-tab="lab1">Lab 1</a></li>
+                <li><a href="#" class="tab-item" data-tab="lab2">Lab 2</a></li>
+                <li><a href="#" class="tab-item" data-tab="lab3">Lab 3</a></li>
+                <li><a href="#" class="tab-item" data-tab="lab4">Lab 4</a></li>
+                <li><a href="#" class="tab-item" data-tab="lab5">Lab 5</a></li>
+                <li><a href="#" class="tab-item" data-tab="lab6">Lab 6</a></li>
+            </ul>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+                <div id="lab1" class="tab-pane active">
+                    <iframe src="https://thanvandanhh.github.io/lab1/" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lab2" class="tab-pane">
+                    <iframe src="https://thanvandanhh.github.io/lab_2/" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lab3" class="tab-pane">
+                    <iframe src="https://thanvandanhh.github.io/lab3/" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lab4" class="tab-pane">
+                    <iframe src="https://thanvandanhh.github.io/lab_4/" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lab5" class="tab-pane">
+                    <iframe src="https://thanvandanhh.github.io/lab5/" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lab6" class="tab-pane">
+                    <iframe src="https://thanvandanhh.github.io/lab_6/" width="100%" height="600px"></iframe>
+                </div>
             </div>
         </div>
     </section>
+
+    <script>
+        const tabItems = document.querySelectorAll('.tab-item');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault(); 
+
+                const targetTab = item.getAttribute('data-tab');
+
+                tabItems.forEach(tab => tab.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                item.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
