@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn {
+    display: inline-block;
+    padding: 1.5rem 3rem; /* Tăng padding */
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 2rem; /* Tăng kích thước chữ */
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Tăng hiệu ứng hover */
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.contact {
+    text-align: center;
+    padding: 5rem 15%; /* Tăng padding để mở rộng không gian */
+}
+.lab-item {
+    margin: 1rem;
+    text-align: center;
+}
+
+.lab-item a {
+    display: inline-block; /* Để nút có thể hiển thị như một nút */
+    padding: 1rem 2.8rem; /* Tương tự như nút */
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.lab-item a:hover {
+    transform: scale(1.05);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+.tooltip {
+    display: none; /* Ẩn tooltip mặc định */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    background-color: #b74b4b; /* Màu nền cho tooltip */
+    color: white; /* Màu chữ */
+    padding: 0.5rem; /* Padding cho tooltip */
+    border-radius: 0.5rem; /* Bo góc */
+    font-size: 1.4rem; /* Kích thước chữ */
+    margin-top: 3rem; /* Khoảng cách từ nút */
+    white-space: nowrap; /* Ngăn ngừa xuống dòng */
+    z-index: 10; /* Đảm bảo tooltip nằm trên các phần tử khác */
+}
+
+.lab-item {
+    position: relative; /* Để tooltip có thể được định vị tương đối */
+}
+
+.btn:hover .tooltip {
+    display: block; /* Hiện tooltip khi hover vào nút */
+}
+    </style>
+    <title>Result</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">My Result</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lab.html">Lab</a>
+            <a href="contact.html">Contact</a>
+            <a href="result.html" class="active">Result</a>
+        </nav>
+    </header>
+    <section>
+        <div class="contact">
+            <h1>Kết Quả Làm Bài Tập Nhóm</h1>
+            <h2>Các Hoạt Động Đã Thực Hiện:</h2>
+            <ul class="lab-container">
+                <li class="lab-item">
+                    <a href="https://diendznhatvutru.github.io/Login_/WebProject/home.html" target="_self" class="btn">
+                        Hoạt động 1
+                        <span class="tooltip">Home - Web Project</span>
+                    </a>
+                </li>
+                <li class="lab-item">
+                    <a href="https://diendznhatvutru.github.io/Login_/WebProject/wallet.html" target="_self" class="btn">
+                        Hoạt Động 2
+                        <span class="tooltip">Wallet - Web Project</span>
+                    </a>
+                </li>
+                <li class="lab-item">
+                    <a href="https://diendznhatvutru.github.io/Login_/WebProject/specialofferwallet.html" target="_self" class="btn">
+                        Hoạt Động 3
+                        <span class="tooltip">Special Offer Wallet - Web Project</span>
+                    </a>
+                </li>
+                <!-- Thêm các hoạt động khác nếu cần -->
+            </ul>
+            <h1>Tự Đánh Giá:</h1>
+            <h2>Tôi tự đánh giá mình được <strong>20%</strong> trong tổng số 100% của bài tập nhóm.</h2>
+        </div>
+    </section>
+</body>
+</html>
